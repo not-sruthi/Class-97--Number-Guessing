@@ -1,18 +1,15 @@
-#Import a random module into your file.
-#Use random to generate a random number from 1-9.
-#Give users 5 chances to guess the number.
-#If the user guesses incorrectly, show a hint or message to the user if their guess was close or far.
-#If the user guesses correctly show the congratulating message.
-#Save the code.
-#Run and test the code.
-
 import random
 
+#getting random number
 number = random.randint(1,9)
 
 chances= 5
+
+#giving user 5 chances to input correct number
 while chances>0:
     guess= int(input('Guess a number from 1 to 9: '))
+    
+    #checking if guess is correct
     if (guess==number):
         print('Congrats!')
         print()
@@ -21,7 +18,8 @@ while chances>0:
         print('Nope!')
         print()
     chances=chances-1
-
+    
+    #fail condition
     if (chances==0):
         print('Too bad! The number was ',number)
 
